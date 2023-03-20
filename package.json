@@ -11,6 +11,8 @@
     "@tsconfig/recommended": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
-    "eslint": "^8.19.0"
-  }
+    "eslint": "^8.19.0",
+    "jest": "^29.5.0"
+  },
+  "packageManager": "yarn@3.4.1"
 }

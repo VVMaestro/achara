@@ -1,4 +1,4 @@
-import { ListNode } from "./ListNode";
+import {ListNode} from './ListNode';
 
 interface Comparator<ValueType> {
   (first: ValueType, second: ValueType): number
