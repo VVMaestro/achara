@@ -17,6 +17,10 @@ export class Stack<T> {
     return this._stack[this._stack.length - 1];
   }
 
+  public isEmpty(): boolean {
+    return this._stack.length === 0;
+  }
+
   public size(): number {
     return this._stack.length;
   }
