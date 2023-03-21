@@ -1,15 +1,31 @@
 export class Queue<T> {
-  private itemList: T[] = [];
+  private _queue: T[];
 
-  public add(item: T): void {
-    this.itemList.push(item);
+  constructor() {
+    this._queue = [];
   }
 
-  public pickNextItem(): T | null {
-    return this.itemList.shift() ?? null;
+  public enqueue(item: T): void {
+    this._queue.push(item);
+  }
+
+  public dequeue(): T | undefined {
+    return this._queue.shift();
+  }
+
+  public peek(): T | undefined {
+    return this._queue[0];
+  }
+
+  public isEmpty(): boolean {
+    return this._queue.length === 0;
+  }
+
+  public size(): number {
+    return this._queue.length;
   }
 
   public clear(): void {
-    this.itemList = [];
+    this._queue = [];
   }
 }
