@@ -5,8 +5,10 @@ export class Queue<T> {
     this._queue = [];
   }
 
-  public enqueue(item: T): void {
+  public enqueue(item: T): Queue<T> {
     this._queue.push(item);
+
+    return this;
   }
 
   public dequeue(): T | undefined {
@@ -25,7 +27,9 @@ export class Queue<T> {
     return this._queue.length;
   }
 
-  public clear(): void {
+  public clear(): Queue<T> {
     this._queue = [];
+
+    return this;
   }
 }
